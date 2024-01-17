@@ -1,4 +1,5 @@
 import React from "react";
+import "./Student.css";
 
 const Student = ({ student }) => {
     const fullName = `${student.names.preferredName} ${student.names.middleName} ${student.names.surname}`
@@ -24,15 +25,14 @@ const Student = ({ student }) => {
     const birthday = formatBirthDate(student.dob)
 
     return (
-        <div>
-            <h2>
-
-                <img src ={student.profilePhoto}></img>
-                { onTrackChecker(student) && <p>On track to Graduate </p> }
-                {fullName}
-                {student.userName}
-                {birthday}
-            </h2>
+        <div className="componentContainer">
+                <img src ={student.profilePhoto} className="thumbnail"></img>
+                <div className = "student-info" >
+                    <p>{fullName}</p>
+                    <p>{student.username}</p>
+                    <p>{birthday}</p>
+                </div>
+                { onTrackChecker(student) && <p className="onTrack">On track to Graduate </p> }
         </div>
     )
 }

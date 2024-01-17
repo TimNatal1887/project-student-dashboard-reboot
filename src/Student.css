@@ -1,0 +1,18 @@
+.componentContainer{
+    display:flex; 
+    flex-direction: row;
+    border: 1px solid black
+}
+
+.thumbnail{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.onTrack{
+    justify-self: right;
+    color: green;
+    font-weight: bold;
+}
+

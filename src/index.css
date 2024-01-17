@@ -3,3 +3,16 @@
     flex-direction: column;
     text-align: ju;
 }
+
+.student-info-body{
+    display: flex;
+}
+
+aside li{
+    border-bottom: 1px solid rgba(180, 180, 180, 0.502);
+}
+
+.sort-button{
+    background-color: green;
+    color: white; 
+}

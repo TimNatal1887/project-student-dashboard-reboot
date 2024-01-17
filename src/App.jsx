@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "./Header";
-import { Route } from "react-router-dom";
+import { Routes,Route } from "react-router-dom";
 import StudentList from "./StudentList";
 
 function App() {

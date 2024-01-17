@@ -1,18 +1,33 @@
-.componentContainer{
-    display:flex; 
-    flex-direction: row;
-    border: 1px solid black
-}
+.componentContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 2px solid black;
+    width: 1000px;
 
-.thumbnail{
+  }
+  
+  .thumbnail {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
     border-radius: 50%;
     width: 100px;
     height: 100px;
-}
-
-.onTrack{
-    justify-self: right;
+  }
+  
+  .onTrack {
     color: green;
     font-weight: bold;
-}
-
+    text-align: center;
+  }
+  
+  .student-info {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  li {
+    list-style: none;
+    margin: 20px 0px;
+  }
+  

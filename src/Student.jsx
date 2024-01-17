@@ -25,15 +25,15 @@ const Student = ({ student }) => {
     const birthday = formatBirthDate(student.dob)
 
     return (
-        <div className="componentContainer">
-                <img src ={student.profilePhoto} className="thumbnail"></img>
-                <div className = "student-info" >
+        <li className="componentContainer">
+            <img src ={student.profilePhoto} className="thumbnail"></img>
+            <div className = "student-info" >
                     <p>{fullName}</p>
                     <p>{student.username}</p>
                     <p>{birthday}</p>
-                </div>
-                { onTrackChecker(student) && <p className="onTrack">On track to Graduate </p> }
-        </div>
+            </div>
+            { onTrackChecker(student) && <p className="onTrack">On track to Graduate </p> }
+        </li>
     )
 }
 

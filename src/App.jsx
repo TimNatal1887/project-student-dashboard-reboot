@@ -16,12 +16,14 @@ function App() {
   return (
     <div className="wrapper">
       <Header />
+      <div className="student-info-body">
       <Routes>
         <Route 
         path="/"
         element={<StudentList students={students}/>}
         />
       </Routes>
+      </div>
     </div>
   );
 }

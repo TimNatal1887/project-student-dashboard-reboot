@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./Header";
+import { Route } from "react-router-dom";
+import StudentList from "./StudentList";
 
 function App() {
   const [students, setStudents] = useState([])
@@ -14,6 +16,12 @@ function App() {
   return (
     <div className="wrapper">
       <Header />
+      <Routes>
+        <Route 
+        path="/"
+        element={<StudentList students={students}/>}
+        />
+      </Routes>
     </div>
   );
 }

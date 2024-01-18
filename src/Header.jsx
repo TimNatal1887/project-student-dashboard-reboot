@@ -1,7 +1,7 @@
-
+import "./Header.css"
 export default function Header(){
     return (
-        <div>
+        <div className="dashboard-header">
             <h1>Student Dashboard</h1>
         </div>
     )

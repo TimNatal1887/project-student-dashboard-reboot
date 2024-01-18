@@ -23,7 +23,9 @@ function App() {
         <Route 
         path="/"
         element={<StudentList students={students}/>}
-        />
+        >
+          <Route path=":cohort" element={<StudentList students={students}/>}/>
+        </Route>
       </Routes>
       </div>
     </div>

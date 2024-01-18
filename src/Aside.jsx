@@ -5,11 +5,11 @@ import { useState } from "react";
 
 const Aside = () => {
     const [toggleAscend, setToggleAscend] = useState(false)
-
-    const cohortList = ["All Students","Winter 2026","Spring 2026", "Summer 2026", "Fall 2026", "Winter 2025", "Spring 2025", "Summer 2025", "Winter 2025"]
+    const [cohortList, setCohortList] = useState(["All Students","Winter 2026","Spring 2026", "Summer 2026", "Fall 2026", "Winter 2025", "Spring 2025", "Summer 2025", "Fall 2025"])
+    
     function handleAscend(){
         setToggleAscend(!toggleAscend)
-        if(toggleAscend){
+        if(!toggleAscend){
             const sortedCohortList = cohortList.slice().sort((a, b) => {
                 if (a === "All Students") return -1;
                 if (b === "All Students") return 1;
@@ -18,7 +18,7 @@ const Aside = () => {
               
                 return yearA - yearB;
               });
-              return sortedCohortList
+              setCohortList(sortedCohortList)
         }else{
             const sortedCohortList = cohortList.slice().sort((a, b) => {
                 if (a === "All Students") return -1;
@@ -28,7 +28,7 @@ const Aside = () => {
               
                 return yearB - yearA;
               });
-            return sortedCohortList
+              setCohortList(sortedCohortList)
         }
     }
   return (
@@ -36,51 +36,26 @@ const Aside = () => {
       <h3> Choose A Class By Start Date </h3>
       <button onClick={handleAscend} className={`sort-button ${toggleAscend ? "descending":"ascending"}`}>Sort {toggleAscend ? "Descending":"Ascending"} By Year</button>
       <ul>
-        <li>
-          <NavLink to="/" className="cohort-NavLink" activeclassname="activeLink">
-            All Students
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/students/cohort/Winter2026" className="cohort-NavLink" activeclassname="activeLink">
-            Winter 2026
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/students/cohort/Spring2026" className="cohort-NavLink" activeclassname="activeLink">
-            Spring 2026
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/students/cohort/Summer2026" className="cohort-NavLink" activeclassname="activeLink">
-            Summer 2026               
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/students/cohort/Fall2026" className="cohort-NavLink" activeclassname="activeLink">
-            Fall 2026
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/students/cohort/Winter2025" className="cohort-NavLink" activeclassname="activeLink">
-            Winter 2025
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/students/cohort/Spring2025" className="cohort-NavLink" activeclassname="activeLink">
-            Spring 2025
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/students/cohort/Summer2025" className="cohort-NavLink" activeclassname="activeLink">
-            Summer 2025
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/students/cohort/Winter2025" className="cohort-NavLink" activeclassname="activeLink">
-            Winter 2025
-          </NavLink>
-        </li>
+        {cohortList.map(cohort=>{
+          const cohortPath = cohort.slice(0,-5) + cohort.slice(-4)
+          if(cohort === "All Students"){
+            return (
+              <li key={cohort}>
+                <NavLink to="/" className="cohort-NavLink" activeclassname="activeLink" key={cohort}>
+                  All Students
+                </NavLink>
+              </li>
+            )
+          }else{
+            return (
+              <li key={cohort}>
+                <NavLink to={`/students/cohort/${cohortPath}`} className="cohort-NavLink" activeclassname="activeLink" key={cohort}>
+                  {cohort}
+                </NavLink>
+              </li> 
+            )
+          }
+        })}
       </ul>
       <div className="about-section">
         <NavLink to="/about" className="about-NavLink">

@@ -26,9 +26,7 @@ p {
     color: black;
   }
   
-  .cohort-NavLink:active,
-  .cohort-NavLink.activeLink,
-  .cohort-NavLink.visited{
+  .cohort-NavLink:hover{
     color: green;
   }
   

@@ -12,6 +12,12 @@ export default function StudentDetails({ students }){
     const {current, goal} = studentInfo.codewars 
     const {scores} = studentInfo.cohort
     const {certifications} = studentInfo
+
+    const goalPercentage =Math.round((current.total / goal.total) * 100 )
+    const assignmentPercentage = scores.assignments * 100
+    const projectPercentage = scores.projects * 100
+    const assessmentPercentage = scores.assessments * 100
+
     return (
         <div>
             <div>
@@ -32,23 +38,23 @@ export default function StudentDetails({ students }){
       <tbody>
         <tr>
           <td>Current Total: {current.total}</td>
-          <td>Cell 1,2</td>
-          <td>Cell 1,3</td>
+          <td>Assignments: {assignmentPercentage}%</td>
+          <td>Resume: {certifications.resume ? "🟢" : "❌"}</td>
         </tr>
         <tr>
-          <td>Cell 2,1</td>
-          <td>Cell 2,2</td>
-          <td>Cell 2,3</td>
+          <td>Last Week: {goal.lastWeek}</td>
+          <td>Projects: {projectPercentage}%</td>
+          <td>LinkedIn: {certifications.linkedin ? "🟢" : "❌"}</td>
         </tr>
         <tr>
-          <td>Cell 3,1</td>
-          <td>Cell 3,2</td>
-          <td>Cell 3,3</td>
+          <td>Goal: {goal.total}</td>
+          <td>Assessments: {assessmentPercentage}%</td>
+          <td>Mock Interview: {certifications.mockInterview ? "🟢" : "❌"}</td>
         </tr>
         <tr>
-          <td>Cell 4,1</td>
-          <td>Cell 4,2</td>
-          <td>Cell 4,3</td>
+          <td>Percent of Goal Achieved: <span className="percentage">{goalPercentage}%</span> </td>
+          <td></td>
+          <td>Github: {certifications.github ? "🟢" : "❌"}</td>
         </tr>
       </tbody>
     </table>

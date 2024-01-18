@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "./Header";
-import { Routes,Route } from "react-router-dom";
+import { Routes,Route,Navigate } from "react-router-dom";
 import StudentList from "./StudentList";
 import Aside from "./Aside";
 
@@ -20,11 +20,12 @@ function App() {
       <div className="student-info-body">
       <Aside />
       <Routes>
-        <Route 
-        path="/"
-        element={<StudentList students={students} cohort="all"/>}
-        >
-          <Route path=":cohort" element={<StudentList students={students}/>}/>
+        <Route path="/">
+          <Route index element={<Navigate to="/students" />}/>
+          <Route path="/students" element={<StudentList students={students}/>}>
+            <Route path=":cohort" element={<StudentList students={students}/>}/>
+            {/* <Route path=":id" element={<StudentDetails />}/> */}
+          </Route>
         </Route>
       </Routes>
       </div>

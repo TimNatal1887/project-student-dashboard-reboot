@@ -42,42 +42,42 @@ const Aside = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/Winter2026" className="cohort-NavLink" activeclassname="activeLink">
+          <NavLink to="/students/Winter2026" className="cohort-NavLink" activeclassname="activeLink">
             Winter 2026
           </NavLink>
         </li>
         <li>
-          <NavLink to="/Spring2026" className="cohort-NavLink" activeclassname="activeLink">
+          <NavLink to="/students/Spring2026" className="cohort-NavLink" activeclassname="activeLink">
             Spring 2026
           </NavLink>
         </li>
         <li>
-          <NavLink to="/Summer2026" className="cohort-NavLink" activeclassname="activeLink">
+          <NavLink to="/students/Summer2026" className="cohort-NavLink" activeclassname="activeLink">
             Summer 2026               
           </NavLink>
         </li>
         <li>
-          <NavLink to="/Fall2026" className="cohort-NavLink" activeclassname="activeLink">
+          <NavLink to="/students/Fall2026" className="cohort-NavLink" activeclassname="activeLink">
             Fall 2026
           </NavLink>
         </li>
         <li>
-          <NavLink to="/Winter2025" className="cohort-NavLink" activeclassname="activeLink">
+          <NavLink to="/students/Winter2025" className="cohort-NavLink" activeclassname="activeLink">
             Winter 2025
           </NavLink>
         </li>
         <li>
-          <NavLink to="/Spring2025" className="cohort-NavLink" activeclassname="activeLink">
+          <NavLink to="/students/Spring2025" className="cohort-NavLink" activeclassname="activeLink">
             Spring 2025
           </NavLink>
         </li>
         <li>
-          <NavLink to="/Summer2025" className="cohort-NavLink" activeclassname="activeLink">
+          <NavLink to="/students/Summer2025" className="cohort-NavLink" activeclassname="activeLink">
             Summer 2025
           </NavLink>
         </li>
         <li>
-          <NavLink to="/Winter2025" className="cohort-NavLink" activeclassname="activeLink">
+          <NavLink to="/students/Winter2025" className="cohort-NavLink" activeclassname="activeLink">
             Winter 2025
           </NavLink>
         </li>

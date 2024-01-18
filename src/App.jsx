@@ -26,7 +26,7 @@ function App() {
           <Route path="/students">
             <Route index element={<StudentList students={students}/>}/>
             <Route path="cohort/:cohort" element={<StudentList students={students} />} />
-            <Route path="student/:id" element={<StudentDetails />} />
+            <Route path="student/:id" element={<StudentDetails students={students} />} />
           </Route>
         </Routes>
       </div>

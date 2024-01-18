@@ -30,4 +30,8 @@
     list-style: none;
     margin: 20px 0px;
   }
+
+  .student-detail-link{
+    text-decoration: none;
+  }
   

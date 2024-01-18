@@ -1,5 +1,6 @@
 import React from "react";
 import "./Student.css";
+import { Link } from "react-router-dom";
 
 const Student = ({ student }) => {
     const fullName = `${student.names.preferredName} ${student.names.middleName} ${student.names.surname}`
@@ -25,6 +26,7 @@ const Student = ({ student }) => {
     const birthday = formatBirthDate(student.dob)
 
     return (
+      <Link to={`/students/student/${student.id}`} className="student-detail-link">
         <li className="componentContainer">
             <img src ={student.profilePhoto} className="thumbnail"></img>
             <div className = "student-info" >
@@ -34,6 +36,8 @@ const Student = ({ student }) => {
             </div>
             { onTrackChecker(student) && <p className="onTrack">On track to Graduate </p> }
         </li>
+
+      </Link>
     )
 }
 

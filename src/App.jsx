@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Header from "./Header";
-import StudentList from "./StudentList";
-import Aside from "./Aside";
-import StudentDetails from "./StudentDetails";
+import Header from "./components/Header";
+import StudentList from "./components/StudentList";
+import Aside from "./components/Aside";
+import StudentDetails from "./components/StudentDetails";
 
 function App() {
   const [students, setStudents] = useState([]);

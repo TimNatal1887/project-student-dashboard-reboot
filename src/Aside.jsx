@@ -10,7 +10,7 @@ const Aside = () => {
     function handleAscend(){
         setToggleAscend(!toggleAscend)
         if(!toggleAscend){
-            const sortedCohortList = cohortList.slice().sort((a, b) => {
+            const sortedCohortList = cohortList.sort((a, b) => {
                 if (a === "All Students") return -1;
                 if (b === "All Students") return 1;
                 const yearA = parseInt(a.match(/\d+/));
@@ -20,7 +20,7 @@ const Aside = () => {
               });
               setCohortList(sortedCohortList)
         }else{
-            const sortedCohortList = cohortList.slice().sort((a, b) => {
+            const sortedCohortList = cohortList.sort((a, b) => {
                 if (a === "All Students") return -1;
                 if (b === "All Students") return 1;
                 const yearA = parseInt(a.match(/\d+/));

@@ -1,14 +1,13 @@
 import { useParams } from "react-router-dom"
 import { formatBirthDate, onTrackChecker } from "./Student"
 
-export default function StudentDetails({students}){
+export default function StudentDetails({ students }){
     const {id} = useParams()
-    console.log(id)
-    console.log(students)
+
+    if(students.length === 0) return null
     
     const studentInfo = students.find((student) => id === student.id)
-    console.log(studentInfo)
-    // const birthday = formatBirthDate(studentInfo.dob)
+    const birthday = formatBirthDate(studentInfo.dob)
     const fullName = `${studentInfo.names.preferredName} ${studentInfo.names.middleName} ${studentInfo.names.surname}`
     const {current, goal} = studentInfo.codewars 
     const {scores} = studentInfo.cohort

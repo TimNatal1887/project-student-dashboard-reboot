@@ -4,11 +4,37 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 const Aside = () => {
-    
+    const [toggleAscend, setToggleAscend] = useState(false)
+
+    const cohortList = ["All Students","Winter 2026","Spring 2026", "Summer 2026", "Fall 2026", "Winter 2025", "Spring 2025", "Summer 2025", "Winter 2025"]
+    function handleAscend(){
+        setToggleAscend(!toggleAscend)
+        if(toggleAscend){
+            const sortedCohortList = cohortList.slice().sort((a, b) => {
+                if (a === "All Students") return -1;
+                if (b === "All Students") return 1;
+                const yearA = parseInt(a.match(/\d+/));
+                const yearB = parseInt(b.match(/\d+/));
+              
+                return yearA - yearB;
+              });
+              return sortedCohortList
+        }else{
+            const sortedCohortList = cohortList.slice().sort((a, b) => {
+                if (a === "All Students") return -1;
+                if (b === "All Students") return 1;
+                const yearA = parseInt(a.match(/\d+/));
+                const yearB = parseInt(b.match(/\d+/));
+              
+                return yearB - yearA;
+              });
+            return sortedCohortList
+        }
+    }
   return (
     <aside>
       <h3> Choose A Class By Start Date </h3>
-      <button className="sort-button">Sort Ascending By Year</button>
+      <button onClick={handleAscend} className={`sort-button ${toggleAscend ? "descending":"ascending"}`}>Sort {toggleAscend ? "Descending":"Ascending"} By Year</button>
       <ul>
         <li>
           <NavLink to="/" className="cohort-NavLink" activeclassname="activeLink">

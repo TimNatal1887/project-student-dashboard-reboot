@@ -3,12 +3,14 @@ import { useParams } from "react-router-dom"
 export default function StudentList({students}){
     const {cohort} = useParams()
     let filteredStudents = students
+    const readableCohortName = cohort ? `${cohort.slice(0,-4)} ${cohort.slice(-4)}`:"All Students"
     if(cohort){
         filteredStudents = students.filter(student=>student.cohort.cohortCode === cohort)
     }
-    console.log(filteredStudents)
     return (
         <ul className="student-list">
+            <h1>{readableCohortName}</h1>
+            <h2>Total Students: {filteredStudents.length}</h2>
             {filteredStudents.map(student=><Student student={student} key={student.id}/>)}
         </ul>
     )

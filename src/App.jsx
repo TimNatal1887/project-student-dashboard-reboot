@@ -22,7 +22,7 @@ function App() {
       <Routes>
         <Route 
         path="/"
-        element={<StudentList students={students}/>}
+        element={<StudentList students={students} cohort="all"/>}
         >
           <Route path=":cohort" element={<StudentList students={students}/>}/>
         </Route>

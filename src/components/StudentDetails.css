@@ -1,0 +1,69 @@
+.student-detail-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid black;
+    width: 75%;
+    margin-top: 40px;
+    min-height: 500px;
+    margin-left: 20px;
+  }
+  
+  .collapsed-info {
+    text-align: center;
+    /* border: 1px solid black; */
+    width: 40%;
+    margin-bottom: auto;
+    
+  }
+  .collapsed-info img{
+    width: 200px;
+    border-radius: 50%;
+  }
+  
+  .form-and-table-wrapper{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+  }
+  .student-table {
+    /* border: 1px solid red; */
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .student-table th, .student-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .student-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .percentage {
+    font-weight: bold;
+    color: green;
+  }
+
+  .comment-form{
+    background:cadetblue ;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-height: 50%;
+    border: 1px solid black;
+  }
+  .comment-form input{
+    margin: 10px 0px;
+    height: 30px;
+  }
+  
+  .comment-list{
+    margin: 0px;
+  }

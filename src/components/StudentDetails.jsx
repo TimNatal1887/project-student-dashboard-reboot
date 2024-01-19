@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom"
 import { formatBirthDate, onTrackChecker } from "./Student"
 import "./StudentDetails.css"
-
+import NotesForm from "./NotesForm"
 export default function StudentDetails({ students }){
     const {id} = useParams()
 
-    if(students.length === 0) return null
+    if(students.length === 0|| !id) return <p>Error, could not find student</p>
     
     const studentInfo = students.find((student) => id === student.id)
     const birthday = formatBirthDate(studentInfo.dob)
@@ -14,7 +14,7 @@ export default function StudentDetails({ students }){
     const {scores} = studentInfo.cohort
     const {certifications} = studentInfo
 
-    const goalPercentage =Math.round((current.total / goal.total) * 100 )
+    const goalPercentage = Math.round((current.total / goal.total) * 100 )
     const assignmentPercentage = scores.assignments * 100
     const projectPercentage = scores.projects * 100
     const assessmentPercentage = scores.assessments * 100
@@ -60,18 +60,7 @@ export default function StudentDetails({ students }){
               </tr>
             </tbody>
           </table>
-          <form className="comment-form">
-            <h2>1:1 Notes</h2>
-            <label htmlFor="">
-              <input type="text" name="author" id="author" />
-            </label>
-            <label htmlFor="">
-              <input type="text" name="comment" id="comment" />
-            </label>
-            <h2>Comments</h2>
-          <ul className="comment-list">
-          </ul>
-          </form>
+          <NotesForm students={students} student={studentInfo}/>
         </div>
       </div>
     )

@@ -67,3 +67,21 @@
   .comment-list{
     margin: 0px;
   }
+
+  .comment-list-item{
+    height: 30px;
+    background-color: aqua;
+    margin-right: 30px;
+    margin-top: auto;
+  }
+
+  .student-comment{
+    font-size: 20px;
+  }
+
+  .comment-form-button{
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+  }

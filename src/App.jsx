@@ -5,11 +5,13 @@ import StudentList from "./components/StudentList";
 import Aside from "./components/Aside";
 import StudentDetails from "./components/StudentDetails";
 
+const URL = import.meta.env.VITE_BASE_API_URL
+
 function App() {
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5001/api/students")
+    fetch(URL)
       .then((response) => response.json())
       .then((data) => {
         setStudents(data);

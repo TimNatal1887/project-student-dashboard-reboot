@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom"
-import { formatBirthDate, onTrackChecker } from "./Student"
+import { formatBirthDate, onTrackChecker } from "../helpers/helpers";
 import "./StudentDetails.css"
 import NotesForm from "./NotesForm"
 export default function StudentDetails({ students }){

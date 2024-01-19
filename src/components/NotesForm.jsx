@@ -1,5 +1,6 @@
-import { useParams,useNavigate} from "react-router-dom";
+import { useParams} from "react-router-dom";
 import { useState } from "react";
+import { addComment } from "../helpers/helpers";
 const URL = import.meta.env.VITE_BASE_API_URL
 console.log(URL)
 export default function NotesForm({students,student}){
@@ -8,24 +9,6 @@ export default function NotesForm({students,student}){
         commenter:"author",
         comment:"comment"
       })
-
-    function addComment(id,commentObject){
-        const updatedStudents = [...students]
-        const studentIndex = updatedStudents.findIndex(student=> student.id === id)
-        updatedStudents[studentIndex].notes.push(commentObject)
-        const options = {
-          method: "PUT",
-          body: JSON.stringify(updatedStudents[studentIndex]),
-          headers: { "Content-Type": "application/json" },
-        };
-        return fetch(`${URL}/${id}`, options)
-        .then((response) => {
-          return response.json();
-        })
-        .catch((error)=>{
-            console.log(error)
-        })
-      }
   
       function handleChange(e){
         setNewComment({
@@ -36,7 +19,7 @@ export default function NotesForm({students,student}){
   
       function handleSubmit(event) {
         event.preventDefault();
-        addComment(id,newComment)
+        addComment(students,id,newComment)
         .then(()=>{
           setNewComment({
                 commenter:"author",

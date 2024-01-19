@@ -7,7 +7,7 @@ const Student = ({ student }) => {
     const birthday = formatBirthDate(student.dob)
 
     return (
-      <Link to={`/students/student/${student.id}`} className="student-detail-link">
+      <Link to={`/student/${student.id}`} className="student-detail-link">
         <li className="componentContainer">
             <img src ={student.profilePhoto} className="thumbnail" alt= "Student Thumbnail"></img>
             <div className ="student-info" >

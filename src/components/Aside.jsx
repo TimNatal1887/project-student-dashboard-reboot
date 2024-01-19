@@ -49,7 +49,7 @@ const Aside = () => {
           }else{
             return (
               <li key={cohort}>
-                <NavLink to={`/students/cohort/${cohortPath}`} className="cohort-NavLink" activeclassname="activeLink" key={cohort}>
+                <NavLink to={`/cohort/${cohortPath}`} className="cohort-NavLink" activeclassname="activeLink" key={cohort}>
                   {cohort}
                 </NavLink>
               </li> 

@@ -25,8 +25,7 @@ function App() {
       <div className="student-info-body">
         <Aside />
         <Routes>
-          <Route path="/" element={<Navigate to="/students" replace/>} />
-          <Route path="/students">
+          <Route path="/">
             <Route index element={<StudentList students={students}/>}/>
             <Route path="cohort/:cohort" element={<StudentList students={students} />} />
             <Route path="student/:id" element={<StudentDetails students={students} />} />

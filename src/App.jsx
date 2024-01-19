@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import StudentList from "./components/StudentList";
 import Aside from "./components/Aside";
 import StudentDetails from "./components/StudentDetails";
+import About from "./components/About";
 
 function App() {
   const [students, setStudents] = useState([]);
@@ -28,6 +29,7 @@ function App() {
             <Route path="cohort/:cohort" element={<StudentList students={students} />} />
             <Route path="student/:id" element={<StudentDetails students={students} />} />
           </Route>
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </div>

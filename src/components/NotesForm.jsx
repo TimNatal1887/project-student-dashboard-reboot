@@ -1,13 +1,13 @@
 import { useParams,useNavigate} from "react-router-dom";
 import { useState } from "react";
-const URL = "http://localhost:5001/api"
+const URL = import.meta.env.VITE_BASE_API_URL
+console.log(URL)
 export default function NotesForm({students,student}){
     const {id} = useParams();
     const [newComment, setNewComment] = useState({
         commenter:"author",
         comment:"comment"
       })
-      const navigate = useNavigate();
 
     function addComment(id,commentObject){
         const updatedStudents = [...students]
@@ -18,7 +18,7 @@ export default function NotesForm({students,student}){
           body: JSON.stringify(updatedStudents[studentIndex]),
           headers: { "Content-Type": "application/json" },
         };
-        return fetch(`${URL}/students/${id}`, options)
+        return fetch(`${URL}/${id}`, options)
         .then((response) => {
           return response.json();
         })

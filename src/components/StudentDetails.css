@@ -69,7 +69,7 @@
   }
 
   .comment-list-item{
-    height: 30px;
+    height: fit-content;
     background-color: aqua;
     margin-right: 30px;
     margin-top: auto;

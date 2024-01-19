@@ -38,7 +38,10 @@ export default function NotesForm({students,student}){
         event.preventDefault();
         addComment(id,newComment)
         .then(()=>{
-          navigate(`/students/student/${id}`)
+          setNewComment({
+                commenter:"author",
+                comment:"comment"
+          })
         })
         .catch((error)=>{
           console.error(error)

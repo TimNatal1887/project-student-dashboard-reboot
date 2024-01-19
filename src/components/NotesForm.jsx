@@ -1,8 +1,7 @@
 import { useParams} from "react-router-dom";
 import { useState } from "react";
 import { addComment } from "../helpers/helpers";
-const URL = import.meta.env.VITE_BASE_API_URL
-console.log(URL)
+
 export default function NotesForm({students,student}){
     const {id} = useParams();
     const [newComment, setNewComment] = useState({

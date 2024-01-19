@@ -1,3 +1,5 @@
+const URL = import.meta.env.VITE_BASE_API_URL
+
 export function formatBirthDate(inputDate) {
     const [month, day, year] = inputDate.split('/').map(Number);
     const monthNames = [

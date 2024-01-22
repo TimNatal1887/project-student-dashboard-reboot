@@ -3,11 +3,12 @@ import "./Aside.css";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
-const Aside = () => {
+const Aside = ({isDarkMode}) => {
     const [toggleAscend, setToggleAscend] = useState(false)
     const [cohortList, setCohortList] = useState(["All Students","Winter 2026","Spring 2026", "Summer 2026", "Fall 2026", "Winter 2025", "Spring 2025", "Summer 2025", "Fall 2025"])
     
     function handleAscend(){
+
         setToggleAscend(!toggleAscend)
         if(!toggleAscend){
             const sortedCohortList = cohortList.sort((a, b) => {
@@ -32,8 +33,8 @@ const Aside = () => {
         }
     }
   return (
-    <aside>
-      <h3> Choose A Class By Start Date </h3>
+    <aside className={`aside-container ${isDarkMode ? 'dark-mode' : ''}`}>
+      <h3 className={`${isDarkMode ? 'dark-mode' : ''}`}> Choose A Class By Start Date </h3>
       <button onClick={handleAscend} className={`sort-button ${toggleAscend ? "descending":"ascending"}`}>Sort {toggleAscend ? "Descending":"Ascending"} By Year</button>
       <ul>
         {cohortList.map(cohort=>{
@@ -41,7 +42,7 @@ const Aside = () => {
           if(cohort === "All Students"){
             return (
               <li key={cohort}>
-                <NavLink to="/" className="cohort-NavLink" activeclassname="activeLink" key={cohort}>
+                <NavLink to="/" className={`cohort-NavLink ${isDarkMode ? 'dark-mode' : ''}`} activeclassname={`activeLink ${isDarkMode ? 'dark-mode' : ''}`} key={cohort}>
                   All Students
                 </NavLink>
               </li>
@@ -49,7 +50,7 @@ const Aside = () => {
           }else{
             return (
               <li key={cohort}>
-                <NavLink to={`/cohort/${cohortPath}`} className="cohort-NavLink" activeclassname="activeLink" key={cohort}>
+                <NavLink to={`/cohort/${cohortPath}`} className={`cohort-NavLink ${isDarkMode ? 'dark-mode' : ''}`} activeclassname={`activeLink ${isDarkMode ? 'dark-mode' : ''}`} key={cohort}>
                   {cohort}
                 </NavLink>
               </li> 
@@ -57,9 +58,9 @@ const Aside = () => {
           }
         })}
       </ul>
-      <div className="about-section">
-        <NavLink to="/about" className="about-NavLink">
-          <p>About the Developers</p>
+      <div className={`about-section ${isDarkMode ? 'dark-mode' : ''}`}>
+        <NavLink to="/about" className={`about-NavLink ${isDarkMode ? 'dark-mode' : ''}`}>
+          <p className={`${isDarkMode ? 'dark-mode' : ''}`}>About the Developers</p>
         </NavLink>
       </div>
     </aside>

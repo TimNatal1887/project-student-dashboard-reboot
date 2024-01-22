@@ -16,6 +16,10 @@ p {
     margin-left: 20px;
 }
 
+.dark-mode p{
+    color: white;
+}
+
 .about-NavLink{
     text-decoration: none;
     font-style: italic;
@@ -25,8 +29,16 @@ p {
     text-decoration: none;
     color: black;
   }
+
+.dark-mode .cohort-NavLink {
+    color: white;
+}
   
   .cohort-NavLink:hover{
     color: green;
+  }
+
+  .dark-mode .aside-container{
+    background-color: #1e1e1e;
   }
   

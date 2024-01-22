@@ -2,9 +2,9 @@ import { useParams } from "react-router-dom"
 import { formatBirthDate, onTrackChecker } from "../helpers/helpers";
 import "./StudentDetails.css"
 import NotesForm from "./NotesForm"
-export default function StudentDetails({ students }){
+export default function StudentDetails({ students, isDarkMode }){
     const {id} = useParams()
-
+ 
     if(students.length === 0|| !id) return <p>Error, could not find student</p>
     
     const studentInfo = students.find((student) => id === student.id)
@@ -20,21 +20,21 @@ export default function StudentDetails({ students }){
     const assessmentPercentage = scores.assessments * 100
 
     return (
-      <div className="student-detail-wrapper">
-        <div className="collapsed-info">
+      <div className={`student-detail-wrapper ${isDarkMode ? 'dark-mode' : ''}`} >
+        <div className={`collapsed-info ${isDarkMode ? 'dark-mode' : ''}`}>
             <img src= {studentInfo.profilePhoto} alt="Student Thumbnail"></img>
             <p>{fullName}</p>
             <p>{studentInfo.username}</p>
             <p>{birthday}</p>
             { onTrackChecker(studentInfo) && <p className="onTrack">On track to Graduate </p> }
         </div>
-        <div className="form-and-table-wrapper">
-          <table className="student-table">
+        <div className={`form-and-table-wrapper ${isDarkMode ? 'dark-mode' : ''}`}>
+          <table className={`student-table ${isDarkMode ? 'dark-mode' : ''}`}>
             <thead>
               <tr>
-                <th>CodeWars</th>
-                <th>Scores</th>
-                <th>Certifications</th>
+                <th className={`${isDarkMode ? 'dark-mode' : ''}`}>CodeWars</th>
+                <th className={`${isDarkMode ? 'dark-mode' : ''}`}>Scores</th>
+                <th className={`${isDarkMode ? 'dark-mode' : ''}`}>Certifications</th>
               </tr>
             </thead>
             <tbody>
@@ -54,7 +54,7 @@ export default function StudentDetails({ students }){
                 <td>Mock Interview: {certifications.mockInterview ? "🟢" : "❌"}</td>
               </tr>
               <tr>
-                <td>Percent of Goal Achieved: <span className="percentage">{goalPercentage}%</span> </td>
+                <td>Percent of Goal Achieved: <span className={`percentage ${isDarkMode ? 'dark-mode' : ''}`}>{goalPercentage}%</span> </td>
                 <td></td>
                 <td>Github: {certifications.github ? "🟢" : "❌"}</td>
               </tr>

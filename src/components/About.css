@@ -13,12 +13,12 @@
     margin-top: 10px;
   }
 
-  h1 {
-    color: #333;
+  .dark-mode .fun-fact {
+    color: #c6c6c6;
   }
-  
-  h2 {
-    color: #555;
+
+  .dark-mode h2 {
+    color: #dddddd;
   }
   
   .github-link {
@@ -30,4 +30,9 @@
   
   .github-link:hover {
     text-decoration: underline;
+  }
+  
+  .dark-mode .about-container {
+    background-color: #1e1e1e;
+    color: rgb(255, 255, 255)
   }

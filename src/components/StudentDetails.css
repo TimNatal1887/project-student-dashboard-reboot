@@ -9,6 +9,10 @@
     min-height: 500px;
     margin-left: 20px;
   }
+
+.dark-mode .student-detail-wrapper {
+  border: 2px solid #b2b2b2;
+}
   
   .collapsed-info {
     text-align: center;
@@ -85,3 +89,13 @@
     margin-right: auto;
     width: 100px;
   }
+
+  .dark-mode th{
+    background-color: #1e1e1e;
+    color: #ffffff; 
+  }
+
+  .dark-mode .comment-list-item p{
+    color: rgb(83, 83, 83);
+  }
+  

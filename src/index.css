@@ -1,10 +1,32 @@
 .wrapper{
     display: flex;
     flex-direction: column;
-    text-align: ju;
 }
 
 .student-info-body{
     display: flex;
+}
+
+.dark-mode .student-info-body{
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark-mode .wrapper{
+    background: #1e1e1e;
+}
+.dark-mode-button{
+    width: fit-content;
+    background: rgb(255, 255, 255);
+    margin-right: 10px;
+}
+
+.button-container{
+    padding: 10px;
+}
+
+.dark-mode .button-container{
+    background: #1e1e1e;
+    padding: 10px;
 }
 

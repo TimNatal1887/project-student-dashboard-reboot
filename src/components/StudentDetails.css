@@ -14,85 +14,86 @@
   border: 2px solid #b2b2b2;
 }
   
-  .collapsed-info {
-    text-align: center;
-    width: 40%;
-    margin-bottom: auto;
-    
+.collapsed-info {
+  text-align: center;
+  width: 40%;
+  margin-bottom: auto; 
   }
-  .collapsed-info img{
-    width: 200px;
-    border-radius: 50%;
-  }
+
+.collapsed-info img{
+  width: 200px;
+  border-radius: 50%;
+}
   
-  .form-and-table-wrapper{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 60%;
-  }
-  .student-table {
-    width: 100%;
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
+.form-and-table-wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 60%;
+}
+.student-table {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
   
-  .student-table th, .student-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
+.student-table th, .student-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
   
-  .student-table th {
-    background-color: #f2f2f2;
-  }
+.student-table th {
+  background-color: #f2f2f2;
+}
   
-  .percentage {
-    font-weight: bold;
-    color: green;
-  }
+.percentage {
+  font-weight: bold;
+  color: green;
+}
 
-  .comment-form{
-    background:cadetblue ;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    min-height: 50%;
-    border: 1px solid black;
-  }
-  .comment-form input{
-    margin: 10px 0px;
-    height: 30px;
-  }
+.comment-form{
+  background:cadetblue ;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-height: 50%;
+  border: 1px solid black;
+}
+
+.comment-form input{
+  margin: 10px 0px;
+  height: 30px;
+}
   
-  .comment-list{
-    margin: 0px;
-  }
+.comment-list{
+  margin: 0px;
+}
 
-  .comment-list-item{
-    height: fit-content;
-    background-color: aqua;
-    margin-right: 30px;
-    margin-top: auto;
-  }
+.comment-list-item{
+  height: fit-content;
+  background-color: aqua;
+  margin-right: 30px;
+  margin-top: auto;
+}
 
-  .student-comment{
-    font-size: 20px;
-  }
+.student-comment{
+  font-size: 20px;
+}
 
-  .comment-form-button{
-    font-weight: bold;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
-  }
+.comment-form-button{
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
 
-  .dark-mode th{
-    background-color: #1e1e1e;
-    color: #ffffff; 
-  }
+.dark-mode th{
+  background-color: #1e1e1e;
+  color: #ffffff; 
+}
 
-  .dark-mode .comment-list-item p{
-    color: rgb(83, 83, 83);
-  }
+.dark-mode .comment-list-item p{
+  color: rgb(83, 83, 83);
+}
   

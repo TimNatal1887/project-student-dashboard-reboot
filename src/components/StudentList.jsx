@@ -1,5 +1,6 @@
 import Student from "./Student.jsx"
 import { useParams } from "react-router-dom"
+
 export default function StudentList({students, isDarkMode}){
     const {cohort} = useParams()
 

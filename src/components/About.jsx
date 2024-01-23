@@ -1,10 +1,7 @@
 import React from 'react';
 import './About.css';
 
-
 export default function About( {isDarkMode}){
-   
-
     return(
         <div className={`about-container ${isDarkMode ? 'dark-mode' : ''}`}>
             <h1 className={`${isDarkMode ? 'dark-mode' : ''}`}>About the Developers</h1>

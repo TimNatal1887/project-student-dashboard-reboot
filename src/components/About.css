@@ -11,36 +11,36 @@
   width: fit-content;
 }
   
-  .developer {
-    margin-top: 20px;
-  }
+.developer {
+  margin-top: 20px;
+}
   
-  .fun-fact {
-    font-size: 16px;
-    color: #777;
-    margin-top: 10px;
-  }
+.fun-fact {
+  font-size: 16px;
+  color: #777;
+  margin-top: 10px;
+}
 
-  .dark-mode .fun-fact {
-    color: #c6c6c6;
-  }
+.dark-mode .fun-fact {
+  color: #c6c6c6;
+}
 
-  .dark-mode h2 {
-    color: #dddddd;
-  }
+.dark-mode h2 {
+  color: #dddddd;
+}
   
-  .github-link {
-    display: block;
-    margin-top: 10px;
-    text-decoration: none;
-    color: #0366d6;/
-  }
+.github-link {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #0366d6;/
+}
   
-  .github-link:hover {
-    text-decoration: underline;
-  }
+.github-link:hover {
+  text-decoration: underline;
+}
   
-  .dark-mode .about-container {
-    background-color: #1e1e1e;
-    color: rgb(255, 255, 255)
-  }
+.dark-mode .about-container {
+  background-color: #1e1e1e;
+  color: rgb(255, 255, 255)
+}

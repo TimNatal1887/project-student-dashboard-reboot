@@ -34,11 +34,11 @@ p {
     color: white;
 }
   
-  .cohort-NavLink:hover{
+.cohort-NavLink:hover{
     color: green;
-  }
+}
 
-  .dark-mode .aside-container{
+.dark-mode .aside-container{
     background-color: #1e1e1e;
-  }
+}
   

@@ -4,34 +4,33 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 const Aside = ({isDarkMode}) => {
-    const [toggleAscend, setToggleAscend] = useState(false)
-    const [cohortList, setCohortList] = useState(["All Students","Winter 2026","Spring 2026", "Summer 2026", "Fall 2026", "Winter 2025", "Spring 2025", "Summer 2025", "Fall 2025"])
-    
-    function handleAscend(){
+  const [toggleAscend, setToggleAscend] = useState(false)
+  const [cohortList, setCohortList] = useState(["All Students","Winter 2026","Spring 2026", "Summer 2026", "Fall 2026", "Winter 2025", "Spring 2025", "Summer 2025", "Fall 2025"])
 
-        setToggleAscend(!toggleAscend)
-        if(!toggleAscend){
-            const sortedCohortList = cohortList.sort((a, b) => {
-                if (a === "All Students") return -1;
-                if (b === "All Students") return 1;
-                const yearA = parseInt(a.match(/\d+/));
-                const yearB = parseInt(b.match(/\d+/));
-              
-                return yearA - yearB;
-              });
-              setCohortList(sortedCohortList)
-        }else{
-            const sortedCohortList = cohortList.sort((a, b) => {
-                if (a === "All Students") return -1;
-                if (b === "All Students") return 1;
-                const yearA = parseInt(a.match(/\d+/));
-                const yearB = parseInt(b.match(/\d+/));
-              
-                return yearB - yearA;
-              });
-              setCohortList(sortedCohortList)
-        }
+  function handleAscend(){
+    setToggleAscend(!toggleAscend)
+    if(!toggleAscend){
+      const sortedCohortList = cohortList.sort((a, b) => {
+        if (a === "All Students") return -1;
+        if (b === "All Students") return 1;
+        const yearA = parseInt(a.match(/\d+/));
+        const yearB = parseInt(b.match(/\d+/));
+          
+        return yearA - yearB;
+      });
+    setCohortList(sortedCohortList)
+    }else{
+      const sortedCohortList = cohortList.sort((a, b) => {
+        if (a === "All Students") return -1;
+        if (b === "All Students") return 1;
+        const yearA = parseInt(a.match(/\d+/));
+        const yearB = parseInt(b.match(/\d+/));
+
+        return yearB - yearA;
+      });
+    setCohortList(sortedCohortList)
     }
+  }
   return (
     <aside className={`aside-container ${isDarkMode ? 'dark-mode' : ''}`}>
       <h3 className={`${isDarkMode ? 'dark-mode' : ''}`}> Choose A Class By Start Date </h3>

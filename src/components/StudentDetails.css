@@ -6,8 +6,8 @@
     border: 2px solid black;
     width: 75%;
     margin-top: 40px;
-    min-height: 500px;
     margin-left: 20px;
+    margin-bottom: 40px;
   }
 
 .dark-mode .student-detail-wrapper {
@@ -16,7 +16,6 @@
   
   .collapsed-info {
     text-align: center;
-    /* border: 1px solid black; */
     width: 40%;
     margin-bottom: auto;
     
@@ -27,14 +26,12 @@
   }
   
   .form-and-table-wrapper{
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 60%;
   }
   .student-table {
-    /* border: 1px solid red; */
     width: 100%;
     margin-top: 20px;
     margin-bottom: 30px;

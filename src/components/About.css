@@ -1,6 +1,8 @@
 .about-container {
     text-align: center;
     padding: 20px;
+    width: 75%;
+    margin-bottom: 85px;
   }
   
   .developer {

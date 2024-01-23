@@ -17,8 +17,14 @@
 }
 .dark-mode-button{
     width: fit-content;
-    background: rgb(255, 255, 255);
+    background: #1e1e1e;
     margin-right: 10px;
+    color: white;
+}
+
+.dark-mode .dark-mode-button{
+    background: white;
+    color: #1e1e1e;
 }
 
 .button-container{

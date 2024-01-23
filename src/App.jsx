@@ -28,7 +28,7 @@ function App() {
     <div className={`wrapper ${isDarkMode ? 'dark-mode' : ''}`}>
       <Header isDarkMode={ isDarkMode }/>
       <div className={`button-container ${isDarkMode ? 'dark-mode' : ''}`}>
-      <button className="dark-mode-button" onClick={ toggleDarkMode }> {isDarkMode ? "Light Mode" : "Dark Mode"} </button>
+      <button className={`dark-mode-button ${isDarkMode ? 'dark-mode' : ''}`} onClick={ toggleDarkMode }> {isDarkMode ? "Light Mode" : "Dark Mode"} </button>
       </div>
       <div className={`student-info-body ${isDarkMode ? 'dark-mode' : ''}`}>
         <Aside isDarkMode={ isDarkMode }/>
